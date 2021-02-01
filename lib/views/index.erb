@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Gossip Girl - You Know You Love Me</title>
+    <link rel="stylesheet" href="https://github.com/Day-101/css/blob/main/styles.css">
+    </head>
+    <style type="text/css">
+      body{display:flex; background-image: url("https://nsa40.casimages.com/img/2021/02/01//21020109435465645.jpg"); background-attachment: fixed; color: #fff;font-family: sans-serif;}
+      .all{width: 450px; margin: auto;}
+      .post{display: block; background: #b5b966; width: fit-content; margin: 30px auto; padding: 9px; border-radius: 10px; color: #fff; text-decoration: none;}
+      #logo{margin: 20px auto;display:block;}
+      .slogan{text-align: center; font-size: medium;}
+      .gossip{background: #000000cf; padding: 15px; margin-bottom: 25px; border-radius: 10px; border: solid 1px #fff9b180;}
+      .message{font-size: x-large;}
+      .signature{color: #fff9b1; text-align: right; margin-right: 20;}
+      h1{font-weight: 100; color: #0f929b;}
+      h2{text-align: right; font-weight: 100;}
+      h3{text-align: right; font-weight: 100;}
+      .read{display: block;margin: auto;width: fit-content;background: #12969f;border-radius: 10px;font-size: 12px;padding: 8px;color: #fff;text-decoration: none;}
+    </style>
+  <body>
+      <div class="all">
+          <img id="logo" src="https://nsa40.casimages.com/img/2021/02/01//210201094659601039.png" alt="GOSSIP GIRL">
+          <h1 class="slogan">Every Gossips About The Uper East Side</h1>
+          <a href="/gossips/new/" class="post">Post a Gossip</a>
+          <% gossips.each_with_index do |gossip, gossip_index| %>
+            <div class="gossip">
+                <p class="message"><%= gossip.content %></p>
+                <p class="signature"><%= gossip.author %></p>
+                <a class="read" href="gossips/<%= gossip_index %>">Read</a>
+            </div>
+            <% end %>
+            <h2>You Know You Love Me</h2>
+            <h3>XOXO Gossip Girl</h3>
+      </div>  
+  </body>
+</html>
