@@ -1,1 +1,3 @@
-You should bundle install and then $shotgun -p 4567
+Work with a $bundle install and a $shotgun -p 4567
+
+XOXO
